@@ -41,6 +41,7 @@
 		F6A4DFA922CCDFD100BEBBB4 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DFA822CCDFD100BEBBB4 /* NavigationController.swift */; };
 		F6A4DFAB22CCE20100BEBBB4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DFAA22CCE20100BEBBB4 /* TabBarController.swift */; };
 		F6A4DFAF22CCF34500BEBBB4 /* MemoryImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DFAE22CCF34500BEBBB4 /* MemoryImageListViewController.swift */; };
+		F6A4DFB122CD00AE00BEBBB4 /* FilesystemImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4DFB022CD00AE00BEBBB4 /* FilesystemImageListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		F6A4DFA822CCDFD100BEBBB4 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		F6A4DFAA22CCE20100BEBBB4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F6A4DFAE22CCF34500BEBBB4 /* MemoryImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryImageListViewController.swift; sourceTree = "<group>"; };
+		F6A4DFB022CD00AE00BEBBB4 /* FilesystemImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesystemImageListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,10 +254,11 @@
 		F6A4DF5322CCBC5400BEBBB4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F6A4DF5C22CCBD0A00BEBBB4 /* ImageListTableViewCell.swift */,
-				F6A4DF5D22CCBD0A00BEBBB4 /* ImageListTableViewCell.xib */,
 				F6A4DF5B22CCBD0A00BEBBB4 /* NetworkImageListViewController.swift */,
 				F6A4DFAE22CCF34500BEBBB4 /* MemoryImageListViewController.swift */,
+				F6A4DFB022CD00AE00BEBBB4 /* FilesystemImageListViewController.swift */,
+				F6A4DF5C22CCBD0A00BEBBB4 /* ImageListTableViewCell.swift */,
+				F6A4DF5D22CCBD0A00BEBBB4 /* ImageListTableViewCell.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				F6A4DF9222CCC4FD00BEBBB4 /* PixaBayService.swift in Sources */,
 				F6A4DFA922CCDFD100BEBBB4 /* NavigationController.swift in Sources */,
 				F6A4DFAB22CCE20100BEBBB4 /* TabBarController.swift in Sources */,
+				F6A4DFB122CD00AE00BEBBB4 /* FilesystemImageListViewController.swift in Sources */,
 				F6A4DF8522CCC31700BEBBB4 /* ViewModel.swift in Sources */,
 				F6A4DF8E22CCC34000BEBBB4 /* ImageList.swift in Sources */,
 				F6A4DF8722CCC31700BEBBB4 /* ViewControllerProtocol.swift in Sources */,

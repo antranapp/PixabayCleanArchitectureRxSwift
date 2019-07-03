@@ -10,12 +10,14 @@ protocol ViewControllerContextHolder: class {
 
 class ViewControllerContext {
 
-    public var networkPixelBayService: NetworkPixabayService
-    public var memoryPixelBayService: MemoryPixabayService
+    public var networkPixaBayService: NetworkPixabayService
+    public var memoryPixaBayService: MemoryPixabayService
+    public var filesystemPixaBayService: FilesystemPixabayService
 
-    init(networkPixelBayService: NetworkPixabayService, memoryPixelBayService: MemoryPixabayService) {
-        self.networkPixelBayService = networkPixelBayService
-        self.memoryPixelBayService = memoryPixelBayService
+    init(networkPixaBayService: NetworkPixabayService, memoryPixaBayService: MemoryPixabayService, filesystemPixaBayService: FilesystemPixabayService) {
+        self.networkPixaBayService = networkPixaBayService
+        self.memoryPixaBayService = memoryPixaBayService
+        self.filesystemPixaBayService = filesystemPixaBayService
     }
 }
 

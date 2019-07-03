@@ -24,7 +24,7 @@ class NetworkImageListViewController: ViewController {
 
     // MARK: Setup ViewModel
 
-    lazy var viewModel = ImageListViewModel(service: context.networkPixelBayService)
+    lazy var viewModel = ImageListViewModel(service: context.networkPixaBayService)
 
     // MARK: Lifecyles
 

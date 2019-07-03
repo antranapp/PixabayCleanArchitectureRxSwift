@@ -7,13 +7,13 @@ import RxCocoa
 import Kingfisher
 import UIKit
 
-class MemoryImageListViewController: ViewController {
+class FilesystemImageListViewController: ViewController {
 
     // MARK: Properties
 
     // Public
 
-    
+
     @IBOutlet weak var searchPickerView: UIPickerView!
     @IBOutlet weak var tableView: UITableView!
 
@@ -23,7 +23,7 @@ class MemoryImageListViewController: ViewController {
 
     // MARK: Setup ViewModel
 
-    lazy var viewModel = ImageListViewModel(service: context.memoryPixaBayService)
+    lazy var viewModel = ImageListViewModel(service: context.filesystemPixaBayService)
 
     // MARK: Lifecyles
 
@@ -35,7 +35,7 @@ class MemoryImageListViewController: ViewController {
 
         tableView.register(UINib(nibName: "ImageListTableViewCell", bundle: nil), forCellReuseIdentifier: "ImageListTableViewCell")
 
-        title = "Memory"
+        title = "Filesystem"
 
         Observable.just(["car", "sky", "flower"])
             .bind(to: searchPickerView.rx.itemTitles) { _, item in
@@ -54,12 +54,12 @@ class MemoryImageListViewController: ViewController {
         viewModel.imageList.subscribe(
             onNext: { imageList in
                 self.tableView.reloadData()
-            }
-        ).disposed(by: disposeBag)
+        }
+            ).disposed(by: disposeBag)
     }
 }
 
-extension MemoryImageListViewController: UITableViewDataSource {
+extension FilesystemImageListViewController: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -70,7 +70,7 @@ extension MemoryImageListViewController: UITableViewDataSource {
     }
 }
 
-extension MemoryImageListViewController: UITableViewDelegate {
+extension FilesystemImageListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ImageListTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ImageListTableViewCell") as! ImageListTableViewCell

@@ -11,9 +11,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        let networkPixelBayService = NetworkPixabayService()
-        let memoryPixelBayService = MemoryPixabayService()
-        let viewControllerContext = ViewControllerContext(networkPixelBayService: networkPixelBayService, memoryPixelBayService: memoryPixelBayService)
+        let networkPixaBayService = NetworkPixabayService()
+        let memoryPixaBayService = MemoryPixabayService()
+        let filesystemPixaBayService = FilesystemPixabayService()
+        let viewControllerContext = ViewControllerContext(networkPixaBayService: networkPixaBayService, memoryPixaBayService: memoryPixaBayService, filesystemPixaBayService: filesystemPixaBayService)
         let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let dashboardViewController = storyBoard.instantiateInitialViewController() as! TabBarController
         dashboardViewController.setViewControllerContext(viewControllerContext)
